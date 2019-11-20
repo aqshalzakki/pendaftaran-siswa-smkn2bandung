@@ -16,6 +16,7 @@ class CreateDetailPendaftaranTable extends Migration
         Schema::create('detail_pendaftaran', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_calon');
+            $table->integer('id_jurusan');
             $table->integer('id_status');
             $table->bigInteger('id_staff');
             $table->timestamps();

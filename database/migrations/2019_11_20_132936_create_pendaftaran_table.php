@@ -27,6 +27,6 @@ class CreatePendaftaranTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status_pendaftaran');
+        Schema::dropIfExists('pendaftaran');
     }
 }

@@ -16,7 +16,8 @@ class StaffSeeder extends Seeder
         DB::table('staff')->insert([
         	'nama'		=> 'Pak Sukarna',
         	'username'	=> 'sukarna',
-        	'password'	=> Hash::make('sukarna')
+        	'password'	=> Hash::make('sukarna'),
+            'created_at'=> now()
         ]);
     }
 }

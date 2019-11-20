@@ -14,10 +14,16 @@ class PendaftaranSeeder extends Seeder
     {
         DB::table('pendaftaran')->insert([
         	[
-        		'id_calon'	=> 1
+        		'id_calon'	 => 1,
+                'created_at' => now()
         	],
+            [
+                'id_calon'   => 2,
+                'created_at' => now()
+            ],
         	[
-        		'id_calon'	=> 3
+        		'id_calon'	 => 3,
+                'created_at' => now()
         	],
         ]);
     }

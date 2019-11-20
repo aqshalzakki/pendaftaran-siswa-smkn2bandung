@@ -17,6 +17,8 @@ class CreateCalonSiswaTable extends Migration
             $table->bigIncrements('id');
             $table->char('nisn', 10);
             $table->string('nama', 40);
+            $table->string('nama_ayah', 40);
+            $table->string('nama_ibu', 40);
             $table->integer('umur');
             $table->string('jenis_kelamin', 15);
             $table->bigInteger('no_telepon');

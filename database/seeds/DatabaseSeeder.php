@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
         	TempatTanggalLahirSeeder::class,
             StatusSeeder::class,
             PendaftaranSeeder::class,
-            DetailPendaftaranSeeder::class
+            DetailPendaftaranSeeder::class,
+            AlurPPDBSeeder::class
         ]);
     }
 }

@@ -15,7 +15,7 @@ class CalonSiswaSeeder extends Seeder
        DB::table('calon_siswa')->insert([
        		[
        			'nisn'   		    => 2002100126,
-       			'nama'   		    => "Muhammad Aq`shal Zakki",
+       			'nama'   		    => "Muhammad Aqshal Zakki",
        			'umur'          => 15,
        			'jenis_kelamin' => 'Laki - Laki',
        			'no_telepon' 	  => 628938473232,

@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'PagesController@home')->name('pages.home');
+Route::get('/jurusan/', 'PagesController@jurusan')->name('pages.jurusan');

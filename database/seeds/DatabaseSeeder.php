@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
             PendaftaranSeeder::class,
             DetailPendaftaranSeeder::class,
-            AlurPPDBSeeder::class
+            AlurPPDBSeeder::class,
+            JurusanSeeder::class
         ]);
     }
 }

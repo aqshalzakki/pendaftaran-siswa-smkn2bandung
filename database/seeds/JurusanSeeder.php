@@ -14,13 +14,19 @@ class JurusanSeeder extends Seeder
     {
         DB::table('jurusan')->insert([
         	[
+                'thumbnail' => 'tki.jpg',
+                'kategori'  => 'Teknologi',
         		'jurusan'	=> 'Teknik Komputer dan Informatika'
         	],
+            [
+                'thumbnail' => 'tm.jpg',
+                'kategori'  => 'Permesinan',
+                'jurusan'   => 'Teknik Mesin'
+            ],
         	[
+                'thumbnail' => 'seni_rupa.jpg',
+                'kategori'  => 'Kesenian',
         		'jurusan'	=> 'Seni Rupa'
-        	],
-        	[
-        		'jurusan'	=> 'Teknik Mesin'
         	]
         ]);
     }

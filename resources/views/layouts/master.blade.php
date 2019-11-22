@@ -37,11 +37,11 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Tentang</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">Pendaftar</a></li>
-          <li class="nav-item"><a href="course.html" class="nav-link">Jurusan</a></li>
-          <li class="nav-item"><a href="teacher.html" class="nav-link">Artikel</a></li>
-          <li class="nav-item"><a href="teacher.html" class="nav-link">Bantuan</a></li>
+          <li class="nav-home nav-item @yield('active_home')"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item @yield('active_pendaftar')"><a href="about.html" class="nav-link">Pendaftar</a></li>
+          <li class="nav-jurusan nav-item @yield('active_jurusan')"><a href="#jurusan" class="nav-link">Jurusan</a></li>
+          <li class="nav-item @yield('active_informasi')"><a href="teacher.html" class="nav-link">Informasi</a></li>
+          <li class="nav-item @yield('active_bantuan')"><a href="teacher.html" class="nav-link">Bantuan</a></li>
           <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Daftar PPDB</span></a></li>
         </ul>
       </div>
@@ -57,18 +57,18 @@
         <div class="row mb-5">
           <div class="col-md-3">
             <div class="ftco-footer-widget mb-4">
-              <h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i>Genius <br><small>University</small></a></h2>
+              <h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i> PPDB <br><small>SMKN 2 BANDUNG</small></a></h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/vhs2bandung?lang=id"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/SMK-Negeri-2-Bandung-445587218969215/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://instagram.com/smkn2bandung"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-4">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <h2 class="ftco-heading-2">Berita Terbaru</h2>
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                 <div class="text">
@@ -95,24 +95,24 @@
           </div>
           <div class="col-md-2">
              <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Site Links</h2>
+              <h2 class="ftco-heading-2">Navigasi</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Home</a></li>
-                <li><a href="#" class="py-2 d-block">About</a></li>
-                <li><a href="#" class="py-2 d-block">Courses</a></li>
-                <li><a href="#" class="py-2 d-block">Students</a></li>
-                <li><a href="#" class="py-2 d-block">Video</a></li>
+                <li><a href="#" class="py-2 d-block">Tentang</a></li>
+                <li><a href="#" class="py-2 d-block">Pendaftar</a></li>
+                <li><a href="#jurusan" class="py-2 d-block">Jurusan</a></li>
+                <li><a href="#" class="py-2 d-block">Informasi</a></li>
+                <li><a href="#" class="py-2 d-block">Bantuan</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-3">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Lokasi</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Jalan Ciliwung No.4, Bandung 40125</span></li>
+	                <li><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></li>
+	                <li><span class="icon icon-envelope"></span><span class="text">infoppdb@gmail.com</span></li>
 	              </ul>
 	            </div>
             </div>
@@ -122,7 +122,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="{{ route('pages.home') }}">PPDB SMKN 2 BANDUNG</a> | Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
@@ -152,6 +152,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{{ asset('js/google-map.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-    
+  <script src="{{ asset('js/myjs.js') }}"></script>
   </body>
 </html>

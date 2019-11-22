@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('title', 'Pendaftaran Peserta Didik Baru SMKN 2 Bandung')
+@section('active_home', 'active')
+
 @section('main-content')
 	<div class="hero-wrap" style="background-image: url('images/bg_1.jpg'); background-attachment:fixed;">
       <div class="overlay"></div>
@@ -13,45 +15,6 @@
         </div>
       </div>
     </div>
-
-    {{-- <section class="ftco-search-course">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="courseSearch-wrap d-md-flex flex-column-reverse">
-    					<div class="full-wrap d-flex ftco-animate">
-    						<div class="one-third order-last p-5">
-    							<span>Know what you're after?</span>
-    							<h3>I want to study</h3>
-    							<form action="#" class="course-search-form">
-		                <div class="form-group d-flex">
-		                  <input type="text" class="form-control" placeholder="Type a course you want to study">
-		                  <input type="submit" value="Search" class="submit">
-		                </div>
-		              </form>
-		              <p>Just Browsing? <a href="#"> See all courses</a></p>
-    						</div>
-    						<div class="one-forth order-first img" style="background-image: url(images/image_1.jpg);"></div>
-    					</div>
-    					<div class="full-wrap ftco-animate">
-    						<div class="one-half">
-    							<div class="featured-blog d-md-flex">
-    								<div class="image d-flex order-last">
-    									<a href="#" class="img" style="background: url(images/image_2.jpg);"></a>
-    								</div>
-    								<div class="text order-first">
-    									<span class="date">Aug 20, 2018</span>
-    									<h3><a href="#">We Conduct Workshop 2018</a></h3>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    								</div>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section> --}}
 
     <section class="ftco-section">
     	<div class="container">
@@ -210,71 +173,34 @@
       </div>
     </section>
 
-    <section class="ftco-freeTrial">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="d-flex align-items-center">
-			    		<div class="free-trial ftco-animate">
-			    			<h3>Try our free trial course</h3>
-			    			<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-			    		</div>
-			    		<div class="btn-join ftco-animate">
-			    			<p><a href="#" class="btn btn-primary py-3 px-4">Join now!</a></p>
-			    		</div>
-			    	</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-    <section class="ftco-section">
+    <section id="jurusan" class="ftco-section bg-light">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Daftar Kejuruan</h2>
+            <h2 class="mb-4">Program Keahlian</h2>
           </div>
         </div>
     		<div class="row">
-    			<div class="col-md-4 d-flex ftco-animate">
-    				<div class="course align-self-stretch">
-    					<a href="#" class="img" style="background-image: url(images/course-1.jpg)"></a>
-    					<div class="text p-4">
-    						<p class="category"><span>Teknologi</span></p>
-    						<h3 class="mb-3"><a href="#">Teknik Komputer dan Informatika</a></h3>
-    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-    						<p><a href="#" class="btn btn-primary">Lihat detail...</a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex ftco-animate">
-    				<div class="course align-self-stretch">
-    					<a href="#" class="img" style="background-image: url(images/course-2.jpg)"></a>
-    					<div class="text p-4">
-    						<p class="category"><span>Permesinan</span></p>
-    						<h3 class="mb-3"><a href="#">Teknik Mesin</a></h3>
-    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-    						<p><a href="#" class="btn btn-primary">Lihat detail...</a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex ftco-animate">
-    				<div class="course align-self-stretch">
-    					<a href="#" class="img" style="background-image: url(images/course-3.jpg)"></a>
-    					<div class="text p-4">
-    						<p class="category"><span>Kesenian</span></p>
-    						<h3 class="mb-3"><a href="#">Seni Rupa</a></h3>
-    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-    						<p><a href="#" class="btn btn-primary">Lihat detail...</a></p>
-    					</div>
-    				</div>
-    			</div>
+    			@foreach ($jurusan as $keahlian)
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="course align-self-stretch">
+                <a href="{{ route('pages.jurusan', ['keahlian'=>strtolower($keahlian->jurusan)]) }}" class="img" style="background-image: url({{ asset('images/jurusan/' . $keahlian->thumbnail) }})"></a>
+                <div class="text p-4">
+                  <p class="category"><span>{{ $keahlian->kategori }}</span></p>  
+                  <h3 class="mb-3"><a href="{{ route('pages.jurusan') }}">{{ $keahlian->jurusan }}</a></h3>
+                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+                  <p><a href="{{ route('pages.jurusan') }}" class="btn btn-primary">Lihat detail</a></p>
+                </div>
+              </div>
+            </div>
+          @endforeach
+
     		</div>
     	</div>
     </section>
 
     
-    <section class="ftco-section bg-light">
+    <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
@@ -331,29 +257,6 @@
                 <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                 <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-		
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
-                </div>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
             <h1 class="mb-4">Selamat datang di PPDB SMKN 2 BANDUNG</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3">Daftar Sekarang!</a> <a href="#" class="btn btn-secondary px-4 py-3">Lihat Pendaftar</a></p>
+            <p><a href="{{ route('login.nisn') }}" class="btn btn-primary px-4 py-3">Daftar Sekarang!</a> <a href="#" class="btn btn-secondary px-4 py-3">Lihat Pendaftar</a></p>
           </div>
         </div>
       </div>

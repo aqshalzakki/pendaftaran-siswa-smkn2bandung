@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('components.master')
 
 @section('title', 'Daftar Jurusan SMKN 2 Bandung')
 @section('active_jurusan', 'active')

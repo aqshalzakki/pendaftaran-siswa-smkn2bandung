@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('components.master')
 
 @section('title', 'Pendaftaran Peserta Didik Baru SMKN 2 Bandung')
 @section('active_home', 'active')
@@ -155,8 +155,8 @@
         			<div class="d-flex mb-4">
         				<div class="img" style="background-image: url(images/person_3.jpg);"></div>
         				<div class="info ml-4">
-        					<h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-        					<span class="position">CSE Teacher</span>
+        					<h3><a href="teacher-single.html">Asep Suryana S.Pd</a></h3>
+        					<span class="position">Wakil Kepala Sekolah</span>
         					<p class="ftco-social d-flex">
 		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
 		                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>

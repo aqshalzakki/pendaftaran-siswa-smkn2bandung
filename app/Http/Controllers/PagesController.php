@@ -13,14 +13,13 @@ class PagesController extends Controller
     {
     	return view('pages.home', [
     		'alur_ppdb' => AlurPPDB::all(),
-            'jurusan'   => Jurusan::all()
+            'jurusan'   => Jurusan::all(),
     	]);
     }
 
     public function jurusan(Request $jurusan)
     {
     	$jurusan = Jurusan::whereJurusan($jurusan->keahlian)->get()[0];
-    	
     	return view('pages.jurusan', [
     		'jurusan' => $jurusan
     	]);

@@ -11,5 +11,11 @@
 |
 */
 
-Route::get('/', 'PagesController@home')->name('pages.home');
+Route::get('/', 'PagesController@home')->name('home');
 Route::get('/jurusan/', 'PagesController@jurusan')->name('pages.jurusan');
+
+// Custom Authentication
+
+	Route::get('/login', 'Auth\LoginController@loginNisnForm')->name('login.nisn');
+
+// ---------------------

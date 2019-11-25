@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'calon_siswa',
     ],
 
     /*
@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'calon_siswa',
         ],
 
         'api' => [
@@ -71,10 +71,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'calon_siswa' => [
+            'driver' => 'eloquent',
+            'model'  => App\CalonSiswa::class
+        ],
     ],
 
     /*
@@ -98,6 +98,11 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+        ],
+        'calon_siswa' => [
+            'provider'  => 'calon_siswa',
+            'table'     => 'password_resets',
+            'expire'    => 60,
         ],
     ],
 

@@ -17,24 +17,24 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Berita Terbaru</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image:  url({{ asset('images/kegiatan/ppdb.jpg') }});"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a href="#">Jumlah pendaftar PPDB mencapai 20.000 peserta</a></h3>
                   <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                    <div><a href="#"><span class="icon-calendar"></span> 12 Agustus 2020</a></div>
                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
                     <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                   </div>
                 </div>
               </div>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url({{ asset('images/kegiatan/job_matching.jpg') }});"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a href="#">SMKN 2 Bandung menekan jumlah pengangguran melalui event Job Matching</a></h3>
                   <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                    <div><a href="#"><span class="icon-calendar"></span> 10 September 2019</a></div>
                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 39</a></div>
                   </div>
                 </div>
               </div>

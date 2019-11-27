@@ -16,7 +16,7 @@ class Authenticate extends Middleware
     {
         // jika tidak ada session / belum login 
         if (!session()->has(['id', 'nisn'])) {
-            return route('login.nisn');
+            return redirect()->route('login.nisn');
         }
     }
 }

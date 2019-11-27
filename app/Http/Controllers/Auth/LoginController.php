@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 // use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -45,15 +46,18 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function loginNisnForm()
+    public function loginNisnForm(Request $request)
     {
-        return request()->has(['nisn', '_token']) ? $this->loginWithNisn(app(NisnRequest::class)) 
+        // hardcode untuk pengecekkan apakah sudah login 
+        if (session()->has(['id', 'nisn', '_token'])) return redirect()->route('calon-siswa.index');
+
+        return $request->has(['nisn', '_token']) ? $this->loginWithNisn(app(NisnRequest::class)) 
                                                   : view('auth.login');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        auth()->logout();
+        $request->session()->flush();
         return redirect()->route('login.nisn')->withMessage('Logout Berhasil!');
     }
 

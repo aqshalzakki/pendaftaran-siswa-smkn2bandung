@@ -16,7 +16,7 @@ class UserLoggedIn
     public function handle($request, Closure $next)
     {
         if (!session()->has(['id', 'nisn'])){
-            return redirect('login.nisn')->withUnauthorized('Anda harus melakukan login terlebih dahulu!');
+            return redirect()->route('login.nisn')->withUnauthorized('Anda harus melakukan login terlebih dahulu!');
         }
         return $next($request);
     }

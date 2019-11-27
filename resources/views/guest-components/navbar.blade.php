@@ -13,8 +13,13 @@
         <li class="nav-item @yield('active_informasi')"><a href="teacher.html" class="nav-link">Informasi</a></li>
         <li class="nav-item @yield('active_bantuan')"><a href="teacher.html" class="nav-link">Bantuan</a></li>
         @guest
-          <li class="nav-item cta @yield('active_login')"><a href="{{ route('login.nisn') }}" class="nav-link"><span>Daftar PPDB</span></a></li>
         @endguest
+        @if(session()->has(['_token', 'id']))
+        
+            <li class="nav-item"><a href="{{ route('calon-siswa.biodata') }}" class="nav-link">Profile Saya</a></li>
+          @else
+            <li class="nav-item cta"><a href="{{ route('login.nisn') }}" class="nav-link"><span>Daftar PPDB</span></a></li>
+        @endif
       </ul>
     </div>
   </div>

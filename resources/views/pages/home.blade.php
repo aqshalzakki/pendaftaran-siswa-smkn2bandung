@@ -210,7 +210,7 @@
         <div class="row">
         	<div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('images/kegiatan/jerawat.jpg') }});">
+              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('images/kegiatan/ppdb.jpg') }});">
               </a>
               <div class="text p-4 d-block">
               	<div class="meta mb-3">
@@ -218,17 +218,16 @@
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                {{-- <h3 class="heading mb-4"><a href="#">Jumlah pendaftar PPDB mencapai 20.000 peserta</a></h3> --}}
-                <h3 class="heading mb-4"><a href="#">WOW ternyata inilah 10 penyebab tumbuhnya jerawat pada bagian kaki... No.7 mencengangkan!!</a></h3>
+                <h3 class="heading mb-4"><a href="#">Jumlah pendaftar PPDB mencapai 20.000 peserta</a></h3>
                 <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                <p><a href="event.html">Selengkapnya <i class="ion-ios-arrow-forward"></i></a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry d-flex align-self-stretch flex-column-reverse">
-              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('images/kegiatan/oura.jpg') }});">
+              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('images/kegiatan/sejarah_smkn2bdg.jpg') }});">
               </a>
               <div class="text p-4 d-block">
               	<div class="meta mb-3">
@@ -236,10 +235,10 @@
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading mb-4"><a href="#">Evos Oura pick estes? tencent bercanda?</a></h3>
+                <h3 class="heading mb-4"><a href="#">Sejarah singkat SMK Negeri 2 Bandung</a></h3>
                 <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                <p><a href="event.html">Selengkapnya <i class="ion-ios-arrow-forward"></i></a></p>
               </div>
             </div>
           </div>
@@ -256,7 +255,7 @@
                 <h3 class="heading mb-4"><a href="#">SMKN 2 Bandung menekan jumlah pengangguran melalui event Job Matching</a></h3>
                 <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                <p><a href="event.html">Selengkapnya <i class="ion-ios-arrow-forward"></i></a></p>
               </div>
             </div>
           </div>

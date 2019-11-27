@@ -17,18 +17,21 @@ class CalonSiswaController extends Controller
     public function index()
     {
         $role_id = session()->get('role_id');
-        // $menu 
+        
         return view('user.utama', [
             'user'  => CalonSiswa::getCalonSiswaById(session()->get('id')),
             'menu'  => Menu::getMenuByRole(),
             'role'  => Role::getRoleById($role_id)
-        ]);
-    }
-
+            ]);
+        }
+        
     public function biodata()
     {
+        $role_id = session()->get('role_id');
         return view('user.biodata', [
+            'user'  => CalonSiswa::getCalonSiswaById(session()->get('id')),
             'menu'  => Menu::getMenuByRole(),
+            'role'  => Role::getRoleById($role_id)
         ]);
     }
 

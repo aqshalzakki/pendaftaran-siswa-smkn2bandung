@@ -27,7 +27,7 @@ Route::prefix('calon-siswa')
      ->middleware(['UserLoggedIn'])
      ->group(function(){
 		Route::get('/', 'CalonSiswaController@index')->name('index');
-		Route::get('/biodata', 'CalonSiswaController@show')->name('biodata');
+		Route::get('/biodata', 'CalonSiswaController@biodata')->name('biodata');
 		Route::get('/edit-biodata', 'CalonSiswaController@edit')->name('edit');
 		Route::get('/berkas-lampiran', 'CalonSiswaController@berkasLampiran')->name('berkas');
 	  });

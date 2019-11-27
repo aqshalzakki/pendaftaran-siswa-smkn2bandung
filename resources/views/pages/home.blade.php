@@ -1,4 +1,4 @@
-@extends('components.master')
+@extends('guest-components.master')
 
 @section('title', 'Pendaftaran Peserta Didik Baru SMKN 2 Bandung')
 @section('active_home', 'active')

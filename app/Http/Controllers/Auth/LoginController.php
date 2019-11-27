@@ -47,27 +47,35 @@ class LoginController extends Controller
 
     public function loginNisnForm()
     {
-        if (request()->has(['nisn', '_token']))
-        {
-            $this->loginWithNisn(app(NisnRequest::class));
-        }
+        return request()->has(['nisn', '_token']) ? $this->loginWithNisn(app(NisnRequest::class)) 
+                                                  : view('auth.login');
+    }
 
-        return view('auth.login');
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('login.nisn')->withMessage('Logout Berhasil!');
     }
 
     public function loginWithNisn(NisnRequest $request)
     {
-        $result = $request->validate([
-            'nisn' => 'required|numeric'
-        ]);
+        $result = $request->validated();
 
         $calonSiswa = CalonSiswa::where(['nisn' => $request->nisn])->first();
 
         if ($calonSiswa)
         {
             // Login Successfully
+            // set session 
+            session([
+                'id'        => $calonSiswa->id,
+                'role_id'   => 1,
+                'nisn'      => $calonSiswa->nisn,
+            ]);
+            return redirect()->route('calon-siswa.index')->withMessage('Login berhasil!');
         }else{
-            // Fails to login 
+            // Fails to login
+            return back()->withError('Nisn tidak ditemukan!'); 
         }
     }
 }

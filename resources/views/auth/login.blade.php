@@ -1,4 +1,4 @@
-@extends('components.master')
+@extends('guest-components.master')
 
 @section('title', 'Halaman Login')
 @section('main-content')
@@ -12,6 +12,21 @@
 						Login
 					</span>
 					<p class="mb-2">Sebelum mendaftar ppdb silahkan login terlebih dahulu menggunakan NISN anda</p>
+					@if(session('error'))
+						<div class="alert alert-danger">
+							{{ session('error') }}
+						</div>
+					@endif
+					@if(session('unauthorized'))
+						<div class="alert alert-danger">
+							{{ session('unauthorized') }}
+						</div>
+					@endif
+					@if(session('message'))
+						<div class="alert alert-success">
+							{{ session('message') }}
+						</div>
+					@endif
 					<div class="wrap-input100 validate-input" data-validate = "NISN harus diisi">
 						<input class="input100" type="text" name="nisn" placeholder="NISN" value="{{ old('nisn') }}">
 						<span class="focus-input100-1"></span>

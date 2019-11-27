@@ -20,7 +20,6 @@ class CalonSiswaSeeder extends Seeder
        			'jenis_kelamin' => 'Laki - Laki',
        			'no_telepon' 	  => 628938473232,
        			'agama'			    => 'Islam',
-       			'nilai_name'    => 'name_aqshal.jpg',
             'created_at'    => now()
        		],
        		[
@@ -30,7 +29,6 @@ class CalonSiswaSeeder extends Seeder
        			'jenis_kelamin' => 'Laki - Laki',
        			'no_telepon' 	  => 628938475021,
        			'agama'			    => 'Islam',
-       			'nilai_name'    => 'name_gilang.jpg',
             'created_at'    => now()
        		],
        		[
@@ -40,7 +38,6 @@ class CalonSiswaSeeder extends Seeder
        			'jenis_kelamin' => 'Laki - Laki',
        			'no_telepon' 	  => 628938473232,
        			'agama'			    => 'Islam',
-       			'nilai_name'    => 'name_ditya.jpg',
             'created_at'    => now()
        		],
        ]); 

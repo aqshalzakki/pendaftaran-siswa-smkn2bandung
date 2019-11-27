@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\CalonSiswa;
 use Illuminate\Http\Request;
+use App\UserMenu as Menu;
+use App\UserRole as Role;
 
 class CalonSiswaController extends Controller
 {
@@ -14,14 +16,22 @@ class CalonSiswaController extends Controller
      */
     public function index()
     {
-        //
+        $role_id = session()->get('role_id');
+        // $menu 
+        return view('user.utama', [
+            'user'  => CalonSiswa::getCalonSiswaById(session()->get('id')),
+            'menu'  => Menu::getMenuByRole(),
+            'role'  => Role::getRoleById($role_id)
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function biodata()
+    {
+        return view('user.biodata', [
+            'menu'  => Menu::getMenuByRole(),
+        ]);
+    }
+
     public function create()
     {
         //

@@ -23,7 +23,9 @@ class DatabaseSeeder extends Seeder
             PendaftaranSeeder::class,
             DetailPendaftaranSeeder::class,
             AlurPPDBSeeder::class,
-            JurusanSeeder::class
+            JurusanSeeder::class,
+            RoleSeeder::class,
+            UserMenuSeeder::class,
         ]);
     }
 }

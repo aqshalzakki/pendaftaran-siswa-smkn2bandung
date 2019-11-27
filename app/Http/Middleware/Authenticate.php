@@ -14,8 +14,9 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
+        // jika tidak ada session / belum login 
+        if (!session()->has(['id', 'nisn'])) {
+            return route('login.nisn');
         }
     }
 }

@@ -17,6 +17,7 @@ class StaffSeeder extends Seeder
         	'nama'		=> 'Pak Sukarna',
         	'username'	=> 'sukarna',
         	'password'	=> Hash::make('sukarna'),
+            'role_id'   => 2,
             'created_at'=> now()
         ]);
     }

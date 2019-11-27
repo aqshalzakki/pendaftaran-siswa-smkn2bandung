@@ -26,7 +26,7 @@ class RemoveNilaiNameFromCalonSiswaTable extends Migration
     public function down()
     {
         Schema::table('calon_siswa', function (Blueprint $table) {
-            //
+            $table->string('nilai_name');
         });
     }
 }
